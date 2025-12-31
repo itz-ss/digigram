@@ -1,0 +1,86 @@
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background: #000; */
+}
+
+.video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+ 
+  z-index: 1;
+}
+
+/* Center Text */
+.video-text {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Word */
+.animated-text {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  display: flex;
+}
+
+/* Each Letter */
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-120px);
+  animation: dropFromTop 0.8s ease-out forwards;
+
+  background: linear-gradient(
+    270deg,
+    #8f4501,
+    #eb8512,
+    #e6902e,
+    #eb8b1d,
+    #ffffff
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.85);
+}
+
+/* EVEN letters fall from bottom */
+.char:nth-child(even) {
+  transform: translateY(120px);
+  animation-name: dropFromBottom;
+}
+
+/* Top drop */
+@keyframes dropFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bottom drop */
+@keyframes dropFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

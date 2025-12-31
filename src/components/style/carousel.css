@@ -1,0 +1,133 @@
+/* =========================
+   ROOT
+========================= */
+.carousel {
+  position: relative;
+  width: 100%;
+  padding: 1vh 0;
+  touch-action: pan-y;
+}
+
+/* =========================
+   FRAME
+========================= */
+.carousel__frame {
+  width: min(90vw, 1100px);
+  height: 70vh;
+  margin: 0 auto;
+  padding: 18px;
+
+  background: linear-gradient(90deg, #755b5b, #0b0b0b);
+  border-radius: 20px;
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* =========================
+   VIEWPORT
+========================= */
+.carousel__viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+}
+
+/* =========================
+   IMAGE (FRAMER MOTION)
+========================= */
+.carousel__image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: brightness(0.95) contrast(1.08);
+  will-change: opacity;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+/* =========================
+   INNER SHADOW
+========================= */
+.carousel__viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  color: #fff;
+
+  font-size: 2.8rem;
+  padding: 0.2em 0.55em;
+  cursor: pointer;
+
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel__nav:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.carousel__nav:active {
+  transform: translateY(-50%) scale(0.97);
+}
+
+.carousel__nav.left {
+  left: 5vw;
+}
+
+.carousel__nav.right {
+  right: 5vw;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .carousel__frame {
+    height: 55vh;
+    padding: 14px;
+  }
+
+  .carousel__nav {
+    font-size: 2.2rem;
+    padding: 0.15em 0.45em;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel__frame {
+    height: 48vh;
+  }
+}

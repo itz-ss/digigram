@@ -1,0 +1,97 @@
+/* ==========================
+   FOOTER BASE
+========================== */
+.footer {
+  background: linear-gradient(180deg, #0e0e0e, #141414);
+  color: #eaeaea;
+  padding: 60px 20px 50px;
+  margin-top: 80px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ==========================
+   TITLE
+========================== */
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #777, #aaa);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================
+   SERVICES LIST
+========================== */
+.footer-services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 34px;
+}
+
+/* ==========================
+   SERVICE ITEM
+========================== */
+.footer-service-item {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* ==========================
+   SERVICE LINK
+========================== */
+.footer-service-link {
+  color: #cfcfcf;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.25s ease;
+}
+
+/* Elegant underline animation */
+.footer-service-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #999, #fff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.footer-service-link:hover {
+  color: #ffffff;
+}
+
+.footer-service-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ==========================*

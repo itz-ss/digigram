@@ -1,0 +1,284 @@
+/* ======================================================
+   🧭 PREMIUM NAVBAR — AFFILIATE MARKETING
+   ====================================================== */
+
+/* ----------------------------------
+   Base Navbar
+---------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 0.9rem 1.5rem;
+  background: rgba(212, 212, 212, 0.2);
+  backdrop-filter: blur(100px);
+  /* box-shadow: 20px 20px 20px rgb(0, 0, 0); */
+  /* border-bottom: 1px solid #e5e7eb; */
+  /* margin-right: 500px; */
+}
+
+/* ----------------------------------
+   Logo
+---------------------------------- */
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  color: #2563eb;
+}
+
+/* ======================================================
+   🖥 DESKTOP MENU
+   ====================================================== */
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  margin-right: 400px;
+
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ----------------------------------
+   Desktop Dropdown
+---------------------------------- */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+
+  min-width: 520px;
+ background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(100px);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  color: #334155;
+  text-decoration: none;
+}
+
+.dropdown-link:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.cat-count {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-left: 0.4rem;
+}
+
+/* ======================================================
+   🍔 HAMBURGER (TABLET & MOBILE ONLY)
+   ====================================================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 2.5px;
+  background-color: #0f172a;
+}
+
+/* ======================================================
+   📱 OVERLAY BACKDROP
+   ====================================================== */
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  z-index: 1100;
+}
+
+/* ======================================================
+   📱 RIGHT DRAWER
+   ====================================================== */
+
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+
+  width: 30%;
+  max-width: 420px;
+  min-width: 280px;
+
+  background-color: #0f0f0f;
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ----------------------------------
+   Drawer Header
+---------------------------------- */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.drawer-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #000000;
+}
+
+/* ----------------------------------
+   Drawer Menu
+---------------------------------- */
+.drawer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.drawer-link {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.drawer-link:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+/* ----------------------------------
+   Drawer Submenu
+---------------------------------- */
+.drawer-submenu {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.drawer-sublink {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+  text-decoration: none;
+}
+
+.drawer-sublink:hover {
+  color: #2563eb;
+}
+
+/* ======================================================
+   📱 RESPONSIVE RULES
+   ====================================================== */
+
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-drawer {
+    width: 40%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-drawer {
+    width: 80%;
+  }
+}

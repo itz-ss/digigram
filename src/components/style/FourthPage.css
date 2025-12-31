@@ -1,0 +1,64 @@
+/* ===============================
+   VARIABLES
+================================ */
+:root {
+  --navbar-height: 70px;
+}
+
+/* ===============================
+   PAGE WRAPPER
+================================ */
+.fourfirst-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===============================
+   BACKGROUND IMAGE SECTION
+================================ */
+.fourbg-img {
+  min-height: calc(100vh - var(--navbar-height));
+  width: 100%;
+
+  /* High-quality rendering */
+  background-image: image-set(
+    url("/assets/story/04.jpg") 1x,
+  
+  );
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 2rem;
+
+  /* Prevent blur on scaling */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* ===============================
+   TEXT STYLING
+================================ */
+.fourbg-img h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   MOBILE FIXES
+================================ */
+@media (max-width: 768px) {
+  .fourbg-img {
+    min-height: calc(100svh - var(--navbar-height));
+    background-position: center top;
+  }
+}

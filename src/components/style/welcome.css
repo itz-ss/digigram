@@ -1,0 +1,159 @@
+/* ======================================================
+   🌐 WELCOME SECTION — PREMIUM MEDICAL UI
+   ====================================================== */
+
+.welcome-section {
+  margin-top: 30px;
+  /* margin: auto; */
+  width: 100%;
+  text-align: justify;
+}
+
+
+/* ------------------------------------------------------
+   CONTAINER
+------------------------------------------------------ */
+
+.welcome-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------
+   ROW LAYOUT
+------------------------------------------------------ */
+
+.welcome-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+
+
+/* ------------------------------------------------------
+   IMAGE COLUMN
+------------------------------------------------------ */
+
+.image-column {
+  position: relative;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Main Image */
+.grid-image {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow:
+    0 10px 35px rgba(0, 32, 64, 0.12);
+}
+
+/* Main Image Accent */
+.main-img {
+  aspect-ratio: 4 / 3;
+}
+
+/* ------------------------------------------------------
+   TEXT COLUMN
+------------------------------------------------------ */
+
+.text-column {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-content {
+  max-width: 100%;
+}
+
+/* ------------------------------------------------------
+   TYPOGRAPHY
+------------------------------------------------------ */
+
+.welcome-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0f2a44;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4b5f73;
+  margin-bottom: 1.1rem;
+}
+
+/* ------------------------------------------------------
+   SUBTLE DECORATIVE TOUCH
+------------------------------------------------------ */
+
+.image-column::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 110, 253, 0.12),
+    rgba(13, 110, 253, 0)
+  );
+  z-index: -1;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------ */
+
+@media (max-width: 1024px) {
+  .welcome-row {
+    gap: 3rem;
+  }
+
+  .welcome-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-row,
+  .welcome-row.reverse {
+    flex-direction: column;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+    text-align: justify;
+    margin: 10px 10px
+  }
+
+  .image-column::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 4rem 1rem;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+  }
+}
