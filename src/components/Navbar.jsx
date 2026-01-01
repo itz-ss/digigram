@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className="navbar">
         {/* Logo */}
         <Link to="/" className="nav-logo">
-          MyStore
+          DigiGram
         </Link>
 
         {/* ================= DESKTOP MENU ================= */}

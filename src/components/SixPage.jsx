@@ -1,32 +1,18 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
+import { useStoryMotion } from "../hooks/useStoryMotion";
 import "./style/firstPage.css";
 
 const SixPage = ({ image, title, text }) => {
   const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center center", "end start"],
-  });
-
-  // Image motion
-  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.05, 1.08]);
-  const imageOpacity = useTransform(scrollYProgress, [0, 0.75, 1], [1, 1, 0]);
-
-  // Text motion
-  const textOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0, 1, 1, 0]
-  );
-
-  const textY = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [40, 0, 0, -40]
-  );
-
+  const {
+        textX,
+        textOpacity,
+        imageScale,
+        imageOpacity,
+      } = useStoryMotion(ref, "belief");
+ 
   return (
     <section ref={ref} className="story-section">
       {/* IMAGE */}
@@ -40,7 +26,7 @@ const SixPage = ({ image, title, text }) => {
       {/* TEXT */}
       <motion.div
         className="story-text right"
-        style={{ opacity: textOpacity, y: textY }}
+        style={{ opacity: textOpacity, x: textX }}
       >
         <h2>Let’s create something people remember.</h2>
         <p>However it needs to exist.<br/>
