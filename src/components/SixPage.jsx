@@ -11,7 +11,7 @@ const SixPage = ({ image, title, text }) => {
         textOpacity,
         imageScale,
         imageOpacity,
-      } = useStoryMotion(ref, "belief");
+      } = useStoryMotion(ref, "invite");
  
   return (
     <section ref={ref} className="story-section">

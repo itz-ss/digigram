@@ -7,37 +7,37 @@ import { useScroll, useTransform } from "framer-motion";
 const PRESETS = {
   opening: {
     textX: [-50, 0, 0, -40],
-    imageScale: [1, 1.05, 1.08],
+    imageScale: [1, 1.05, 1.20],
     imageOpacity: [1, 1, 0.25, 0],
   },
 
   insight: {
     textX: [40, 0, 0, 30],
-    imageScale: [1, 1.04, 1.06],
+    imageScale: [1, 1.04, 1.30],
     imageOpacity: [1, 1, 0.2, 0],
   },
 
   pause: {
     textX: [-20, 0, 0, -15],
-    imageScale: [1, 1.02, 1.03],
+    imageScale: [1, 1.02, 1.20],
     imageOpacity: [1, 1, 0.15, 0],
   },
 
   craft: {
     textX: [40, 0, 0, 35],
-    imageScale: [1, 1.05, 1.07],
+    imageScale: [1, 1.05, 1.35],
     imageOpacity: [1, 1, 0.2, 0],
   },
 
   belief: {
     textX: [-25, 0, 0, -20],
-    imageScale: [1, 1.03, 1.04],
+    imageScale: [1, 1.03, 1.25],
     imageOpacity: [1, 1, 0.15, 0],
   },
 
   invite: {
     textX: [20, 0, 0, 15],
-    imageScale: [1, 1.02, 1.03],
+    imageScale: [1, 1.02, 1.20],
     imageOpacity: [1, 1, 0.1, 0],
   },
 };
