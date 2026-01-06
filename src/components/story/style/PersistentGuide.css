@@ -1,0 +1,23 @@
+.persistent-guide {
+  position: fixed;
+  left: 1vw;
+  bottom: 3vh;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.guide-placeholder {
+  width: 150px;
+  height: auto;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile: hide completely */
+@media (max-width: 768px) {
+  .persistent-guide {
+  display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.story-container {
+  position: relative;
+}
+
+/* Every scene occupies the same viewport */
+.story-scene {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
